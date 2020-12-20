@@ -63,16 +63,37 @@ h4,
 h5,
 h6 {
     color: var(--gray-dark);
-    font-weight: bold
+    font-weight: bold;
 }
 
 .btn {
     font-weight: bold;
     padding: .375rem 1rem;
     height: 2.75rem;
-    transition: all 0.4s ease-in-out
+    transition: all 0.4s ease-in-out;
 }
 
+.header .nav-item {
+    font-weight: bold;
+    margin: 0px 10px;
+}
+
+.header .nav-item.active a {
+    color: rgb(222, 86, 240);
+}
+
+.header .nav-item.active a:hover {
+    text-decoration: none;
+}
+
+.header .nav-item a {
+    color: rgb(0, 0, 0);
+}
+
+.header .nav-item a:hover {
+    text-decoration: none;
+    color: rgb(222, 86, 240);
+}
 
 .header .site-title {
     color:var(--white);

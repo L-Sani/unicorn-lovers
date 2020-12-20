@@ -1,8 +1,7 @@
 <?php
 
 function unicorn_theme_support(){
-    //adds dynamic title tag support
-    add_theme_support('title-tag');
+    add_theme_support('title-tag'); //adds dynamic title tag support
 }
 add_action( 'after_setup_theme', 'unicorn_theme_support' );
 
