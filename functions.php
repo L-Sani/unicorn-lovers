@@ -2,6 +2,7 @@
 
 function unicorn_theme_support(){
     add_theme_support('title-tag'); //adds dynamic title tag support
+    add_theme_support('post-thumbnails'); //adds thumbnails to post
 }
 add_action( 'after_setup_theme', 'unicorn_theme_support' );
 
