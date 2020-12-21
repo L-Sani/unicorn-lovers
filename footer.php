@@ -25,7 +25,7 @@
                     <img src="<?php echo get_template_directory_uri()."/assets/img/icons/ic-twitter.svg"?>" width="20" height="20" alt="">
                 </a>
             </div>
-            <span class="navbar-text mr-0 mr-md-3">
+            <span class="navbar-text mr-2 mr-md-5">
                 2020. All love and happines
             </span>
         </div>

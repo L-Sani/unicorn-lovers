@@ -9,7 +9,7 @@ Author: Lehady Sani-Agatha
     --blue: #007bff;
     --indigo: #6610f2;
     --purple: #6f42c1;
-    --pink: #ee3577;
+    --pink: #ff3c81;
     --red: #dc3545;
     --orange: #f68e62;
     --yellow: #ffc107;
@@ -28,11 +28,6 @@ Author: Lehady Sani-Agatha
     --light: #c2c2c2;
     --lightgray: #eeeeee;
     --dark: #434242;
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
     --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     /* Font Sizes */
@@ -73,6 +68,11 @@ h6 {
     transition: all 0.4s ease-in-out;
 }
 
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: var(--pink)!important;
+    border-color: var(--pink)!important;
+}
+
 .header .nav-item {
     font-weight: bold;
     margin: 0px 10px;
@@ -100,9 +100,13 @@ h6 {
 }
 
 .header .site-title {
-    color:var(--white);
+    color:var(--dark);
     font-size:1.2em;
     display:block;
+}
+
+.section-heading {
+    color: var(--pink);
 }
 
 .footer .navbar-nav li{
@@ -134,18 +138,17 @@ h6 {
 .main-wrapper .container {
     max-width: var(--content-max-width);
 }
-.page-title {
-    position:sticky;
-    top:0;
-    z-index:9999;
-    transition:all .2s;
-}
-.sticky{
-    padding:1em 0 !important;
-}
+
 .page-title .heading {
     font-size: 5rem;
     font-weight: bold;
     color:black;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+    .page-title .heading {
+        font-size: 2rem;
+    }
 }
 

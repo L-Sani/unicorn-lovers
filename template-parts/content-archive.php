@@ -12,7 +12,7 @@
                     <?php the_tags('<span class="tag badge badge-pill badge-secondary mr-1">', '</span><span class="tag badge badge-pill badge-secondary mx-1">', '</span>'); ?>
                 </div>
                 <a class="more-link" href="<?php the_permalink(); ?>">Read more &rarr;</a>
-            </div><!--//media-body-->
-        </div><!--//media-->
+            </div>
+        </div>
     </div>
 </div>
