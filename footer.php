@@ -1,7 +1,7 @@
 <footer class="footer">	   
-    <nav class="navbar fixed-bottom navbar-expand-lg navbar-light ml-2 ml-md-5">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand ml-2 ml-md-5" href="#">
                 <img src="<?php echo get_template_directory_uri()."/assets/img/brand/logo.svg"?>" width="50" height="50" alt="">
             </a>
             <?php
@@ -25,7 +25,7 @@
                     <img src="<?php echo get_template_directory_uri()."/assets/img/icons/ic-twitter.svg"?>" width="20" height="20" alt="">
                 </a>
             </div>
-            <span class="navbar-text">
+            <span class="navbar-text mr-0 mr-md-3">
                 2020. All love and happines
             </span>
         </div>
