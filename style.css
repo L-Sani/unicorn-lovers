@@ -105,6 +105,28 @@ h6 {
     display:block;
 }
 
+.footer .navbar-nav li{
+    font-weight: bold;
+    margin: 0px 10px;
+}
+
+.footer .navbar-nav .active a {
+    color: rgb(222, 86, 240);
+}
+
+.footer .navbar-nav .active a:hover {
+    text-decoration: none;
+}
+
+.footer .navbar-nav a {
+    color: rgb(0, 0, 0);
+}
+
+.footer .navbar-nav a:hover {
+    text-decoration: none;
+    color: rgb(222, 86, 240);
+}
+
 .main-wrapper {
     background: #fff;
 }

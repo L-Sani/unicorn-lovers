@@ -1,17 +1,19 @@
 <footer class="footer">	   
-    <nav class="navbar navbar-expand-lg navbar-light ml-2 ml-md-5">
+    <nav class="navbar fixed-bottom navbar-expand-lg navbar-light ml-2 ml-md-5">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="<?php echo get_template_directory_uri()."/assets/img/brand/logo.svg"?>" width="50" height="50" alt="">
             </a>
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-            </ul>
+            <?php
+                wp_nav_menu(
+                    array(
+                        'menu' => 'footer',
+                        'container' => '',
+                        'theme_location' => 'footer',
+                        'items_wrap' => '<ul id="" class="navbar-nav">%3$s</ul>'
+                    )
+                );
+            ?>   
             <div class="navbar-nav mx-auto">
                 <a class="nav-link" href="#">
                     <img src="<?php echo get_template_directory_uri()."/assets/img/icons/ic-facebook.svg"?>" width="20" height="20" alt="">
