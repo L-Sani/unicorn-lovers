@@ -59,15 +59,19 @@ function unicorn_loadmore_ajax_handler(){
 	$args['paged'] = $_POST['page'] + 1;
 	$args['post_status'] = 'publish';
  
-	query_posts( $args );
- 
-	if( have_posts() ) :
-		while( have_posts() ): the_post();
-            get_template_part('template-parts/content', 'archive');
-		endwhile;
-    endif;
+    query_posts( $args );?>
     
-	die;
+    <div class="row">
+        <?php
+        if( have_posts() ) :
+            while( have_posts() ): the_post();
+                get_template_part('template-parts/content', 'archive');
+            endwhile;
+        endif;
+        ?>
+    </div>
+    
+	<?php die;
 }
 add_action('wp_ajax_loadmore', 'unicorn_loadmore_ajax_handler');
 add_action('wp_ajax_nopriv_loadmore', 'unicorn_loadmore_ajax_handler'); 
