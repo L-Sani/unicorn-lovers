@@ -22,7 +22,7 @@ add_action( 'init', 'unicorn_menus' );
 function unicorn_register_styles(){
     $version = wp_get_theme()->get( 'Version' );
 
-    wp_enqueue_style( 'unicorn-style', get_template_directory_uri() . '/style.css', array('unicorn-bootstrap'), $version, 'all');
+    wp_enqueue_style( 'unicorn-style', get_template_directory_uri() . '/assets/css/unicorn.css', array('unicorn-bootstrap'), $version, 'all');
     wp_enqueue_style( 'unicorn-bootstrap', "https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css", array(), '4.5.3', 'all');
     wp_enqueue_style( 'unicorn-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css", array(), '5.13.0', 'all');
 }

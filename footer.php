@@ -27,7 +27,7 @@
                 </a>
             </div>
             <span class="navbar-text mr-2 mr-md-5">
-                2020. All love and happines
+                <?php echo esc_html( '2020. All love and happines' );?>
             </span>
         </div>
     </nav>	   

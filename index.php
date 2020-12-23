@@ -5,7 +5,7 @@ global $wp_query;
 
 <article class="content px-3 py-5 p-md-5">
 	<header class="page-title text-center gradient py-5">
-		<h1 class="heading"><?php echo "Latest corns"; ?></h1>
+		<h1 class="heading"><?php echo esc_html( 'Latest corns' );?></h1>
 	</header>
 	<div class="row">
 		<?php if (have_posts()) : ?>
