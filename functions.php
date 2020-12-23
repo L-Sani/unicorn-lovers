@@ -36,7 +36,7 @@ function unicorn_register_scripts(){
     wp_enqueue_script( 'unicorn-popper', "https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js", array(), '1.16.1', true);
     wp_enqueue_script( 'unicorn-bootstrap', "https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js", array(), '4.5.3', true);
  
-	// register our main script but do not enqueue it yet
+	// register our main script 
 	wp_register_script( 'unicorn-loadmore', get_template_directory_uri() . '/assets/js/loadMore.js', array('jquery') );
  
 	// pass parameters to loadMore.js script wp_localize_script()
@@ -59,15 +59,19 @@ function unicorn_loadmore_ajax_handler(){
 	$args['paged'] = $_POST['page'] + 1;
 	$args['post_status'] = 'publish';
  
-	query_posts( $args );
- 
-	if( have_posts() ) :
-		while( have_posts() ): the_post();
-            get_template_part('template-parts/content', 'archive');
-		endwhile;
-    endif;
+    query_posts( $args );?>
     
-	die;
+    <div class="row">
+        <?php
+        if( have_posts() ) :
+            while( have_posts() ): the_post();
+                get_template_part('template-parts/content', 'archive');
+            endwhile;
+        endif;
+        ?>
+    </div>
+    
+	<?php die;
 }
 add_action('wp_ajax_loadmore', 'unicorn_loadmore_ajax_handler');
 add_action('wp_ajax_nopriv_loadmore', 'unicorn_loadmore_ajax_handler'); 
