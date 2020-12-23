@@ -133,8 +133,10 @@ h6 {
 
 .main-wrapper {
     background: #fff;
-    margin-left: 3rem;
-    margin-right: 3rem;
+}
+
+.main-wrapper .container {
+    max-width: var(--content-max-width);
 }
 
 .page-title .heading {
@@ -147,11 +149,6 @@ h6 {
 @media (max-width: 576px) { 
     .page-title .heading {
         font-size: 2rem;
-    }
-
-    .main-wrapper {
-        margin-left: 10px;
-        margin-right: 10px;
     }
 }
 

@@ -1,4 +1,3 @@
-</div>
 <footer class="footer">	   
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
@@ -11,7 +10,7 @@
                         'menu' => 'footer',
                         'container' => '',
                         'theme_location' => 'footer',
-                        'items_wrap' => '<ul id="" class="navbar-nav mx-5 mx-md-0">%3$s</ul>'
+                        'items_wrap' => '<ul id="" class="navbar-nav">%3$s</ul>'
                     )
                 );
             ?>   
@@ -33,6 +32,7 @@
     </nav>	   
 </footer>
     
+    </div>
 
 <?php wp_footer(); ?>
 
