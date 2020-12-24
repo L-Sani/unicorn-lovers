@@ -1,5 +1,35 @@
 <?php
 
+//Register Custom Gutenberg Categories
+function unicorn_category( $categories, $post ) {
+	return array_merge(
+		$categories,
+		array(
+			array(
+				'slug' => 'custom-blocks',
+				'title' => __( 'Custom Blocks', 'custom-blocks' ),
+			),
+		)
+	);
+}
+add_filter( 'block_categories', 'unicorn_category', 10, 2);
+
+//Register Custom Hero Block
+function unicorn_register_blocks() {
+	if( ! function_exists('acf_register_block') )
+		return;
+	acf_register_block( array(
+		'name'			=> 'hero',
+		'title'			=> __( 'Hero', 'heroblock' ),
+		'render_template'	=> 'partials/article-hero.php',
+		'category'		=> 'custom-blocks',
+		'icon'			=> 'dashicons-id',
+		'mode'			=> 'edit',
+		'keywords'		=> array( 'hero', 'header' )
+	));
+}
+add_action('acf/init', 'unicorn_register_blocks' );
+
 //function that adds dynamic title tag and featured image support
 function unicorn_theme_support(){
     add_theme_support('title-tag');

@@ -11,7 +11,7 @@ $related = new WP_Query(
    );
 ?>
 <section>
-    <div class="related-post-title text-center">
+    <div class="related-post-title text-center mb-5">
         <h4> More magic</h4>
     </div>
     <div class="related-post-content d-flex justify-content-center" id="related-post">
