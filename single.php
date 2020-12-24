@@ -7,8 +7,12 @@
 			the_post();
 			
 			get_template_part('template-parts/content', 'article');
+			get_template_part('template-parts/content', 'related-post');
+
+			}
+
+			wp_reset_postdata();
 		}
-	}
 	?>
 </article>
 
