@@ -1,7 +1,7 @@
 <?php
-  $bg       = get_field('hero_image');
-  $heading  = get_field('hero_heading');
-  $tagline  = get_field('hero_tagline');
+  $bg       = !class_exists('ACF') ? 'image' : get_field('hero_image');
+  $heading  = !class_exists('ACF') ? 'heading' : get_field('hero_heading');
+  $tagline  = !class_exists('ACF') ? 'tagline' : get_field('hero_tagline');
   error_log(print_r($heading, TRUE));
 ?>
 
