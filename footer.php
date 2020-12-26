@@ -2,7 +2,7 @@
 <footer class="footer">	   
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-            <a class="navbar-brand ml-2 ml-md-5" href="#">
+            <a class="navbar-brand ml-2 ml-md-5" href="/">
                 <img src="<?php echo get_template_directory_uri()."/assets/img/brand/logo.svg"?>" width="50" height="50" alt="">
             </a>
             <?php

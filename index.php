@@ -15,10 +15,11 @@ global $wp_query;
 		<?php endif; ?>
 	</div>
 	
-	<?php
-	if (  $wp_query->max_num_pages > 1 )
-		echo '<button class="btn btn-primary btn-lg btn-block unicorn_loadmore mt-5">Load More Posts</button>';
-	?>
+	<?php if (  $wp_query->max_num_pages > 1 ) { ?>
+		<button class="btn btn-primary btn-lg btn-block unicorn_loadmore mt-5">
+			<?php echo esc_html( 'Load More Posts' );?>
+		</button>
+	<?php } ?>
 </article>
 
 <?php get_footer(); ?>
